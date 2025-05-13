@@ -1,0 +1,28 @@
+[tool.poetry] 
+name = "example" 
+version = "0.1.0" 
+description = "" 
+authors = ["Pedro Araujo <dodobeatle@gmail.com>"] 
+readme = "README.md" 
+
+[tool.poetry.dependencies] 
+python = ">=3.9,<3.13" 
+dagster = "^1.10.13"
+mlflow = "^2.22.0"
+dbt-core = "^1.9.4"
+dbt-postgres = "^1.9.0"
+notebook = "^7.4.2"
+meltano = "^3.7.4"
+jupyterlab = "^4.4.2"
+
+[build-system] 
+requires = ["poetry-core>=2.0.0,<3.0.0"] 
+build-backend = "poetry.core.masonry.api" 
+
+
+[tool.dagster] 
+module_name = "example.definitions" 
+project_name = "example" 
+
+[tool.setuptools.packages.find] 
+exclude=["example_tests"] 
